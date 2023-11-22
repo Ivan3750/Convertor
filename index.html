@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert  </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="convert">
+        <div class="FROM">
+            <select id="from_valuta">
+                <option value="UAH">UAH</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="DKK">DKK</option>
+            </select>
+            <input type="text" name="From_num" id="FromNum" class="FromNum" placeholder="0">
+        </div>
+        <div class="TO">
+            <select id="to_valuta">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="DKK">DKK</option>
+                <option value="UAH">UAH</option>
+            </select>
+    <!--         <input type="number" name="To_num" id="To_num">
+    -->       
+            <p class="ToNum" id="ToNum">0</p>
+        </div>
+    <button type="submit" id="convertBtn">Конвертувати</button>
+    </form>  
+      <script src="script.js"></script>
+
+</body>
+</html>
