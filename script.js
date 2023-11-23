@@ -5,6 +5,7 @@ const DKK = {'UAH': 5.25, 'EUR': 0.13, 'USD': 0.14};
 
 
 
+
 const convert = document.getElementById("convert");
 convert.addEventListener("submit", function (event) {
     event.preventDefault();
@@ -13,8 +14,7 @@ convert.addEventListener("submit", function (event) {
     let ToValuta = document.getElementById("to_valuta").value;
     let FromNum = document.getElementById("FromNum").value;
     let ToNum = document.querySelector(".ToNum");
-    
-    if (FromNum > 0){
+    if ((ToValuta != FromValuta) && (FromNum > 0)){
         let Result = 0;
         switch (FromValuta) {
             case 'UAH':
@@ -30,17 +30,19 @@ convert.addEventListener("submit", function (event) {
                 Result = DKK[ToValuta]*FromNum;
                 break;
             default:
-                    console.error("Error");
-                    return;
+                console.error("Error");
+                return;
             }
             Result = Math.round(Result*100)/100
-                console.log(Result)
-                ToNum.innerHTML = Result;
-                
-    }else if (FromValuta === ToValuta) { 
-        alert("Ви не можете виконати операцію так як у вас стоять дві однакові валюти ");
-    }
-    else{
+            console.log(Result)
+            ToNum.innerHTML = Result;
+                    
+    }else if((ToValuta == FromValuta) && (FromNum > 0)){
+        alert("Ведіть вірні дані ");
+        
+    }else{
         alert("Ведіть вірне число ");
+
     }
+                    
 });

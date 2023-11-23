@@ -30,7 +30,9 @@
    html{ 
     scroll-behavior: smooth; 
    }
-
+*{
+    font-family: Work Sans;
+}
 
 
 form{
@@ -39,9 +41,9 @@ form{
     justify-content: center;
     flex-direction: column;
     max-width: 400px;
-    border: 1px solid #000;
     padding: 50px 20px;
     border-radius: 30px;
+    box-shadow: 10px 10px 20px #959595;
 }
 
 #convertBtn{
@@ -63,7 +65,7 @@ form{
 
 
 .FromNum, .ToNum{
-    width: 100px;
+    width: 150px;
     height: 30px;
     display: flex;
     justify-content: center;
@@ -74,5 +76,5 @@ form{
 }
 
 input::placeholder{
-    color: #000;
+    color: #b5b5b5;
 }
